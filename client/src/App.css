@@ -367,4 +367,37 @@ form textarea{
   height: 100%;
   top: 0;
   object-fit: cover;
+  z-index: 1;
+}
+
+.footerContent{
+  z-index: 3;
+  position: relative;
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brandInfo > p{
+  color: white;
+}
+
+.brandInfo{
+  width: 40%;
+}
+
+.footerMenu{
+  display: flex;
+  flex-direction: column;
+}
+
+.footerMenu li{
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.footerMenu li a{
+  color: white;
+  text-decoration: none;
+  margin: 1rem 0;
 }
