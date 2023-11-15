@@ -14,15 +14,15 @@ const Header = () => {
         <h1 className="headerHeading">AI Generated Image <p>&nbsp;Detection</p></h1>
         <div className="headerBenefits">
           <div className="row">
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             <p>100% Accurate Result</p>
           </div>
           <div className="row">
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             <p>Deep fake Detection</p>
           </div>
           <div className="row">
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
             <p>Quick Processing</p>
           </div>
         </div>
