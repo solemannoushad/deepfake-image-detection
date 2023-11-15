@@ -35,7 +35,7 @@ export default function Contact() {
 
             <textarea value={credentials.message} onChange={handleChange} name="message" id="" cols="30" rows="10" placeholder='Your Message' required tabIndex={5}></textarea>
             <div className="btn">
-              Upload Image
+              Send Message
             </div>
 
           </form>
