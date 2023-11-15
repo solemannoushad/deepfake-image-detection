@@ -191,6 +191,8 @@ input[type=number] {
   border: none;
   box-shadow: 0 0 1rem var(--primaryClr);
   transition: .5s ease;
+  text-align: center;
+  display: inline-block;
 }
 
 .btn:hover{
@@ -393,11 +395,38 @@ form textarea{
 
 .footerMenu li{
   list-style-type: none;
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .footerMenu li a{
   color: white;
   text-decoration: none;
-  margin: 1rem 0;
+}
+
+.footer .logo{
+  margin-bottom: 1rem;
+}
+
+.newstellerMain{
+  display: flex;
+  flex-direction: column;
+}
+
+.newstellerMain input{
+  background: transparent;
+  border: 1px solid var(--primaryClr);
+  border-radius: .8rem;
+  margin-bottom: 2rem;
+  padding: .5rem 1rem;
+  outline: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  /* width: 20rem; */
+}
+
+.footerB{
+  background-color: var(--bg1);
+  padding: .7rem 0;
+  color: white;
+  text-align: center;
 }

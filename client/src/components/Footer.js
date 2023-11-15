@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
           <div className="newstellerMain">
             <h1 className='logo'>Newsteller</h1>
-            <input type="text" />
+            <input type="text" placeholder='Email Address' />
             <div className="btn">Subscribe</div>
           </div>
         </div>
