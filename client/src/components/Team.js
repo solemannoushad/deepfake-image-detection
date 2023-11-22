@@ -6,14 +6,14 @@ import Member from './Member'
 
 const Team = () => {
   return (
-    <div className="teamMain section">
+    <div className="teamMain section"  id="team">
         <h1 className="sectionh1">
             Our&nbsp; <p>Team</p>
         </h1>
         <div className="teamContent">
-          <Member img={abdullah} name={"Muhamad Abdullah"} profession={"Software Developer"}/>
+          <Member img={abdullah} name={"Muhamad Abdullah"} profession={"ML Engineer"}/>
           <Member img={soleman} name={"Soleman Noushad"} profession={"Software Developer"}/>
-          <Member img={zohaib} name={"Muhamad Zohaib"} profession={"Software Developer"}/>
+          <Member img={zohaib} name={"Muhamad Zohaib"} profession={"ML Engineer"}/>
         </div>
     </div>
   )

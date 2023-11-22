@@ -21,6 +21,11 @@ body{
     --text-color: #fff;
 }
 
+html{
+  scroll-behavior: smooth !important;
+  font-size: 100%;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -53,7 +58,7 @@ input[type=number] {
 }
 
 #navbar{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -62,6 +67,14 @@ input[type=number] {
   padding: 1.8rem 2rem;
   z-index: 3;
   align-items: center;
+  transition: all .3s ease;
+}
+
+.sticky{
+  border-bottom: .1rem solid rgba(0,0,0,.2);
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+  background-color: var(--bg-color);
+  padding: 1rem 2rem !important;
 }
 
 .menu{
@@ -76,15 +89,36 @@ input[type=number] {
   position: relative;
   text-transform: uppercase;
   font-weight: 600;
+  transition: all .3s ease;
 }
 
+.menu li a:hover,
 .active{
   color: var(--primaryClr) !important;
+
 }
+
+.menu li a:hover:after{
+  width: 50%;
+  transition: all .3s ease;
+}
+
 
 .active::after{
   content: '';
-  width: 50%;
+  width: 50% !important;
+  height: 3px;
+  position: absolute;
+  background-color: var(--primaryClr);
+  bottom: -5px;
+  right: 0;
+  transition: all .3s ease;
+}
+
+.menu li a::after{
+  content: '';
+  width: 0%;
+  transition: all .3s ease;
   height: 3px;
   position: absolute;
   background-color: var(--primaryClr);
@@ -214,7 +248,7 @@ input[type=number] {
 .aboutContent{
   display: flex;
   justify-content: space-between;
-  padding: 7rem 7rem 0 7rem;
+  padding: 2rem 7rem 0 7rem;
 
 }
 
@@ -236,7 +270,7 @@ input[type=number] {
 .sectionh1{
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 6rem 0 1rem 0;
   color: white;
 }
 
@@ -286,16 +320,18 @@ input[type=number] {
   flex-direction: column;
   align-items: center;
   margin:0 2rem;
+  border-radius: 50%;
 }
 
 .imgC{
   width: 270px;
   height: 270px;
-  background-color: red;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 .5rem var(--primaryClr);
 }
+
 
 .imgC img{
   position: absolute;

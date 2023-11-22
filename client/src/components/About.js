@@ -3,7 +3,7 @@ import img from '../assets/176923.jpg'
 
 const About = () => {
   return (
-    <div className="aboutMain section">
+    <div className="aboutMain section" id='about'>
         <h1 className="sectionh1">
             About&nbsp; <p>Project</p>
         </h1>
