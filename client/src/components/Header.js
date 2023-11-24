@@ -6,12 +6,12 @@ const Header = () => {
   return (
     <>
       <div className="fade"></div>
-      <video autoPlay muted loop id="header">
+      <video autoPlay muted loop id="header" className='section'>
         <source src={video} type="video/mp4"/>
       </video>
       <div className="headerContent">
-        <h1 className="headerHeading">Digital Image <p>&nbsp;Processing</p></h1>
-        <h1 className="headerHeading">AI Generated Image <p>&nbsp;Detection</p></h1>
+        <h1 className="headerHeading headerHeading1">Digital Image <p>&nbsp;Processing</p></h1>
+        <h1 className="headerHeading headerHeading2">AI Generated Image <p>&nbsp;Detection</p></h1>
         <div className="headerBenefits">
           <div className="row">
             <i className="fa-solid fa-check"></i>
@@ -26,9 +26,13 @@ const Header = () => {
             <p>Quick Processing</p>
           </div>
         </div>
-        <div className="btn">
+        <label for="file" className="btn">
           Upload Image
-        </div>
+        </label>
+        <input className='file' type="file" name="file" id="file"
+          accept=".jpg, .jpeg, .png"
+          multiple={true}
+        />
       </div>
       <Navbar/>
     </>

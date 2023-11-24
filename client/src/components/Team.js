@@ -11,9 +11,9 @@ const Team = () => {
             Our&nbsp; <p>Team</p>
         </h1>
         <div className="teamContent">
-          <Member img={abdullah} name={"Muhamad Abdullah"} profession={"ML Engineer"}/>
-          <Member img={soleman} name={"Soleman Noushad"} profession={"Software Developer"}/>
-          <Member img={zohaib} name={"Muhamad Zohaib"} profession={"ML Engineer"}/>
+          <Member class={'mem1'} img={abdullah} name={"Muhamad Abdullah"} profession={"ML Engineer"}/>
+          <Member class={'mem2'} img={soleman} name={"Soleman Noushad"} profession={"Software Developer"}/>
+          <Member class={'mem3'} img={zohaib} name={"Muhamad Zohaib"} profession={"ML Engineer"}/>
         </div>
     </div>
   )

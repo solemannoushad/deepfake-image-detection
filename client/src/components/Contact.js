@@ -22,7 +22,7 @@ export default function Contact() {
         <h1 className="sectionh1">
             Contact&nbsp; <p>Us!</p>
         </h1>
-          <form>
+          <form className='form'>
             <div className="input-box">
               <input value={credentials.name} onChange={handleChange} type="text" name="name" id="name" placeholder='Full Name' required tabIndex={1} />
               <input value={credentials.email} onChange={handleChange} type="email" name="email" id="email" placeholder='Email Address' required tabIndex={2} />
