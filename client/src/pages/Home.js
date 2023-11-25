@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import FooterBar from '../components/FooterBar'
 import Loading from '../components/Loading'
 import ScrollReveal from 'scrollreveal'
-// import TopBtn from '../components/TopBtn'
+import TopBtn from '../components/TopBtn'
 
 
 
@@ -61,7 +61,7 @@ const Home = () => {
 
   return (
     <>
-        {/* <TopBtn/> */}
+        <TopBtn/>
         { loading && <Loading/>}
         <Header/>
         <About/>

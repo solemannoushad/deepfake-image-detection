@@ -2,9 +2,9 @@ import React from 'react'
 
 const TopBtn = () => {
   return (
-    <div className='topBtn'>
-        <a href="#home"><i class="fa-solid fa-up-long"></i></a>
-    </div>
+    <a href='#header' className='topBtn'>
+        <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+    </a>
   )
 }
 
