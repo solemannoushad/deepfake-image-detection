@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../assets/video (2160p) (2).mp4'
+import video from '../assets/video (2160p) (5).mp4'
 
 const Footer = () => {
   return (

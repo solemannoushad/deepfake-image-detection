@@ -13,7 +13,7 @@ body{
 }
 
 :root {
-  --primaryClr: #D34410;
+  --primaryClr: #00EEFF;
   --bg1: #1F242D;
   --bg2: #323946;
   --bg-color: #1f242d;
@@ -216,7 +216,7 @@ input[type=number] {
 .btn{
   font-weight: 600;
   text-transform: uppercase;
-  color: white;
+  color: var(--bg1);
   background-color: var(--primaryClr);
   padding: .7rem 2rem;
   display: inline-block;
