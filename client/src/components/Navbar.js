@@ -33,7 +33,7 @@ const Navbar = () => {
             <li><a href="#about">About</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
-            <label for="file" className="menuBtn">Upload</label>
+            <label htmlFor="file" className="menuBtn">Upload</label>
         </ul>
         <input className='file' type="file" name="file" id="file"
           accept=".jpg, .jpeg, .png"

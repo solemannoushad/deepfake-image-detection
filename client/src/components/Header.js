@@ -1,8 +1,51 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import video from '../assets/video (2160p) (5).mp4'
 
 const Header = () => {
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const uploadImage = async () => {
+      if (!selectedImage) {
+        console.error('No image selected');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('image', selectedImage);
+
+      try {
+        const response = await fetch('http://localhost:8000/api/img/process', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          console.log('Image uploaded successfully');
+          console.log(formData)
+          // Handle success as needed
+        } else {
+          console.error('Failed to upload image');
+          // Handle failure as needed
+        }
+      } catch (error) {
+        console.error('Error during image upload:', error);
+        // Handle error as needed
+      }
+    };
+
+    uploadImage();
+  }, [selectedImage]);
+
+  const handleFileChange = (event) => {
+    setSelectedImage(event.target.files[0]);
+  };
+
+
+
+
   return (
     <>
       <div className="fade"></div>
@@ -26,12 +69,13 @@ const Header = () => {
             <p>Quick Processing</p>
           </div>
         </div>
-        <label for="file" className="btn">
+        <label htmlFor="file" className="btn">
           Upload Image
         </label>
         <input className='file' type="file" name="file" id="file"
           accept=".jpg, .jpeg, .png"
           multiple={true}
+          onChange={handleFileChange}
         />
       </div>
       <Navbar/>

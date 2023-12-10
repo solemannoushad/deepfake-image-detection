@@ -39,7 +39,6 @@ const Home = () => {
     let sections = document.querySelectorAll('.section');
     let navLinks = document.querySelectorAll('.menu li a');
   
-    console.log(navLinks);
   
     window.onscroll = ()=>{
       sections.forEach(sec => {
