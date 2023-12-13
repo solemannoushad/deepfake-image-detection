@@ -29,6 +29,7 @@ export const imgController = async (req, res) => {
 
     PythonShell.run('python.py', options).then(messages=>{
       console.log('finished', messages);
+      fs.unlinkSync(filePath);
       return res.status(200).json({msg: messages})
     });
 

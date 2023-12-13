@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import video from '../assets/video (2160p) (5).mp4'
-import Loading from './Loading'
+import { InfinitySpin } from  'react-loader-spinner'
+
 
 const Header = () => {
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [output, setOutput] = useState(null);
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
     const uploadImage = async () => {
       if (!selectedImage) {
         return;
       }
-
-      setLoading(true)
 
       const formData = new FormData();
       formData.append('image', selectedImage);
@@ -27,11 +26,11 @@ const Header = () => {
         })
 
         const json = await response.json();
-        console.log(json.msg[4])
+        console.log(json.msg)
         if(json.msg[4] == 0){
           setOutput("Deepfaked");
         }else{
-          setOutput("Not deepfaked");
+          setOutput("Not Deepfaked");
         }
         
 
@@ -43,24 +42,39 @@ const Header = () => {
     // Call uploadImage when selectedImage changes
     if (selectedImage) {
       uploadImage();
+      setModal(true)
     }
   }, [selectedImage]);
-  
-  useEffect(()=>{
-    alert(output)
-    setLoading(false)
-  } , [output])
 
   const handleFileChange = (event) => {
     setSelectedImage(event.target.files[0]);
   };
+
+  const closeModal = ()=>{
+    setModal(false)
+    setOutput(null)
+  }
 
 
 
 
   return (
     <>
-      {loading && <Loading/>}
+      { modal &&
+            <div className='modalMain'>
+            <div className="modalContainer">
+              { output != null && <i className="fa-solid fa-xmark" onClick={closeModal}></i>}
+                <h2>Deep fake Detection</h2>
+                <p>Please Wait, Your image is under processing.</p>
+                {output == null && <InfinitySpin 
+                        width='150'
+                        color="#00EEFF"
+                />}
+                <p>{output !=null && "The image you provided is"}</p>
+                <b>{output !=null && output}</b>
+            </div>
+        </div>
+      }
       <div className="fade"></div>
       <video autoPlay muted loop id="header" className='section'>
         <source src={video} type="video/mp4"/>
@@ -71,7 +85,7 @@ const Header = () => {
         <div className="headerBenefits">
           <div className="row">
             <i className="fa-solid fa-check"></i>
-            <p>100% Accurate Result</p>
+            <p>85% Accurate Result</p>
           </div>
           <div className="row">
             <i className="fa-solid fa-check"></i>

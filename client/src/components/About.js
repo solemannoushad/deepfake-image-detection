@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/images (2).jpeg'
+import img from '../assets/WhatsApp Image 2023-12-13 at 14.59.05_d87ececd.jpg'
 
 const About = () => {
   return (
