@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import logo from '../assets/pv-logo.png'
 
 const Navbar = () => {
 
@@ -27,7 +28,9 @@ const Navbar = () => {
 
   return (
     <nav id="navbar" className="navbar">
-        <div className="logo">Brand <p>&nbsp;Name</p></div>
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
         <ul className="menu">
             <li><a href="#header" className='active'>Home</a></li>
             <li><a href="#about">About</a></li>

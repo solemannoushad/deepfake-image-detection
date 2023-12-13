@@ -64,7 +64,7 @@ input[type=number] {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 1.8rem 2rem;
+  padding: .1rem 2rem;
   z-index: 3;
   align-items: center;
   transition: all .3s ease;
@@ -74,7 +74,7 @@ input[type=number] {
   border-bottom: .1rem solid rgba(0,0,0,.2);
   box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
   background-color: var(--bg-color);
-  padding: 1rem 2rem !important;
+  padding: 0rem 2rem !important;
 }
 
 .menu{
@@ -141,12 +141,9 @@ input[type=number] {
   cursor: pointer;
 }
 
-.logo{
-  display: flex;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: white;
+.logo img{
+  /* display: flex; */
+  height: 100px;
 }
 
 .logo p{
