@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import video from '../assets/video (2160p) (5).mp4'
+import Loading from './Loading'
 
 const Header = () => {
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [output, setOutput] = useState(null);
 
   useEffect(() => {
     const uploadImage = async () => {
       if (!selectedImage) {
-        console.error('No image selected');
         return;
       }
+
+      setLoading(true)
 
       const formData = new FormData();
       formData.append('image', selectedImage);
@@ -20,24 +24,32 @@ const Header = () => {
         const response = await fetch('http://localhost:8000/api/img/process', {
           method: 'POST',
           body: formData,
-        });
+        })
 
-        if (response.ok) {
-          console.log('Image uploaded successfully');
-          console.log(formData)
-          // Handle success as needed
-        } else {
-          console.error('Failed to upload image');
-          // Handle failure as needed
+        const json = await response.json();
+        console.log(json.msg[4])
+        if(json.msg[4] == 0){
+          setOutput("Deepfaked");
+        }else{
+          setOutput("Not deepfaked");
         }
+        
+
       } catch (error) {
         console.error('Error during image upload:', error);
-        // Handle error as needed
       }
     };
-
-    uploadImage();
+    
+    // Call uploadImage when selectedImage changes
+    if (selectedImage) {
+      uploadImage();
+    }
   }, [selectedImage]);
+  
+  useEffect(()=>{
+    alert(output)
+    setLoading(false)
+  } , [output])
 
   const handleFileChange = (event) => {
     setSelectedImage(event.target.files[0]);
@@ -48,6 +60,7 @@ const Header = () => {
 
   return (
     <>
+      {loading && <Loading/>}
       <div className="fade"></div>
       <video autoPlay muted loop id="header" className='section'>
         <source src={video} type="video/mp4"/>

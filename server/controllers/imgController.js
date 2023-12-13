@@ -22,26 +22,15 @@ export const imgController = async (req, res) => {
       return res.status(500).json({ error: 'Internal Server Error' });
     }
 
-    // Continue with the image processing or any other logic
-
-    // Example: sending the image path to a Python server for processing
-    const options = {
+    let options = {
       mode: 'text',
-      scriptPath: 'C:\\Users\\solem\\Desktop\\DIP\\deepfake\\server\\python', // Double backslashes for Windows path
-      args: [filePath],
+      args: [filePath]
     };
 
-    PythonShell.run('python.py', options, (pythonErr, results) => {
-      if (pythonErr) {
-        console.error('Error during Python script execution:', pythonErr);
-        return res.status(500).json({ error: 'Internal Server Error' });
-      }
-      else{
-        console.log("object")
-      }
-
-      console.log('Python script results:', results);
-      res.json({ message: 'Image uploaded, saved, and processed successfully.' });
+    PythonShell.run('python.py', options).then(messages=>{
+      console.log('finished', messages);
+      return res.status(200).json({msg: messages})
     });
+
   });
 };
