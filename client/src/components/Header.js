@@ -53,6 +53,7 @@ const Header = () => {
   const closeModal = ()=>{
     setModal(false)
     setOutput(null)
+    setSelectedImage(null);
   }
 
 

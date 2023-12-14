@@ -270,7 +270,7 @@ input[type=number] {
 .sectionh1{
   display: flex;
   justify-content: center;
-  padding: 6rem 0 1rem 0;
+  padding: 7rem 0 1rem 0;
   color: white;
 }
 
@@ -499,7 +499,7 @@ form textarea{
 
 .topBtn{
   position: fixed;
-  padding: .4rem .9rem;
+  padding: .5rem .8rem;
   z-index: 99999;
   bottom: -100px;
   right: 40px;
@@ -509,7 +509,7 @@ form textarea{
 }
 
 .btnAfter{
-  bottom: 30px !important;
+  bottom: 10px !important;
 }
 
 .topBtn:hover{
@@ -517,7 +517,7 @@ form textarea{
   transition: all .5s ease;
 }
 
-.topBtn a{
+.topBtn i{
   text-decoration: none;
   color: var(--bg1);
   z-index: 9999999;

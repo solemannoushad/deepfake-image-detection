@@ -2,9 +2,6 @@ import sys
 
 pathName = sys.argv[1]
 
-
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.layers import Input, Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization, Dropout, Reshape, Concatenate, LeakyReLU

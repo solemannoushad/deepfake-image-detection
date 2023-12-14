@@ -3,7 +3,7 @@ import React from 'react'
 const FooterBar = () => {
   return (
     <div className='footerB'>
-      © BrandName AI. All rights reserved.
+      © Pure Visuals. All rights reserved.
     </div>
   )
 }
