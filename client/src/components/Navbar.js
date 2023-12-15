@@ -23,7 +23,7 @@ const Navbar = () => {
     let navbar = document.querySelector('nav');
     let topBtn = document.querySelector('.topBtn');
     navbar.classList.toggle('sticky' , scrollY > 100);
-    topBtn.classList.toggle('btnAfter' , scrollY > 100);
+    topBtn.classList.toggle('btnAfter' , scrollY > 250);
   } , [scrollY])
 
   return (

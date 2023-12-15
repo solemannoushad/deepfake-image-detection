@@ -8,6 +8,7 @@ import FooterBar from '../components/FooterBar'
 import Loading from '../components/Loading'
 import ScrollReveal from 'scrollreveal'
 import TopBtn from '../components/TopBtn'
+import Notification from '../components/Notification'
 
 
 
@@ -68,6 +69,7 @@ const Home = () => {
         <Contact/>
         <Footer/>
         <FooterBar/>
+        <Notification/>
     </>
   )
 }
