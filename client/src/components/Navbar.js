@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/pv-logo.png'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -32,16 +33,13 @@ const Navbar = () => {
           <img src={logo} alt="" />
         </div>
         <ul className="menu">
-            <li><a href="#header" className='active'>Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <label htmlFor="file" className="menuBtn">Upload</label>
+            <li><a href="http://localhost:3000/#header" className='active'>Home</a></li>
+            <li><a href="http://localhost:3000/#about">About</a></li>
+            <li><a href="http://localhost:3000/#team">Team</a></li>
+            <li><a href="http://localhost:3000/#blogs">Blogs</a></li>
+            <li><a href="http://localhost:3000/#contact">Contact</a></li>
+            <Link to='/signup' className="menuBtn">Join</Link>
         </ul>
-        <input className='file' type="file" name="file" id="file"
-          accept=".jpg, .jpeg, .png"
-          multiple={true}
-        />
     </nav>
   )
 }

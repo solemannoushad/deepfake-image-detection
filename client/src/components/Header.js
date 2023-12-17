@@ -106,7 +106,7 @@ const Header = () => {
           onChange={handleFileChange}
         />
       </div>
-      <Navbar/>
+      {/* <Navbar/> */}
     </>
   )
 }

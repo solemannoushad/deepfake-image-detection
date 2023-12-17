@@ -9,7 +9,8 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: var(--bg1);
+  background-color: var(--bg2);
+  overflow-x: hidden;
 }
 
 :root {
@@ -169,6 +170,7 @@ input[type=number] {
   padding: .7rem 1rem;
   border-radius: 40px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .logo img{
@@ -266,7 +268,7 @@ input[type=number] {
 
 
 .aboutMain{
-  background-color: var(--bg1);
+  background-color: var(--bg2);
   position: relative;
 }
 
@@ -336,7 +338,7 @@ input[type=number] {
 }
 
 .teamMain{
-  background-color: var(--bg2);
+  background-color: var(--bg1);
 }
 
 .teamContent{
@@ -398,6 +400,10 @@ input[type=number] {
   font-size: 1.2rem;
   margin: 0 .3rem;
   cursor: pointer;
+}
+
+#contact{
+  background-color: var(--bg1);
 }
 
 .contact form{
@@ -602,4 +608,106 @@ form textarea{
   top: 20px;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.blogMain{
+  background-color: var(--bg2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogsContent{
+  display: flex;
+  margin: 1rem 3rem;
+}
+
+.blogBoxMain{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg1);
+  border: 1px solid var(--bg1);
+  width: 350px;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+  transition: all .5s ease;
+  margin: .6rem 1.5rem;
+  height: 500px;
+}
+
+.blogBoxMain:hover{
+  box-shadow: 0 0 .5rem var(--primaryClr);
+}
+
+.blogImg{
+  width: 100%;
+  position: relative;
+  height:220px;
+}
+
+.blogImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title,
+.description{
+  color: white;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: .5rem 0;
+}
+
+.content{
+  padding: 1rem;
+}
+
+.readMoreBtn{
+  border: 1px solid var(--primaryClr);
+  display: inline-block;
+  padding: .7rem;
+  color: white;
+  margin: .5rem;
+  cursor: pointer;
+  transition: all .5s ease;
+
+}
+  .readMoreBtn:hover{
+    box-shadow: 0 0 .4rem var(--primaryClr);
+
+  }
+.btnMain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seeAllBtn{
+  text-decoration: none;
+}
+
+.blogsPageMain{
+  background-color: var(--bg2);
+}
+
+.blogsPartMain{
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.blogh1{
+  padding: 1rem 0 !important;
+}
+
+.blogheader{
+  height: 12rem !important;
+  visibility: hidden;
 }

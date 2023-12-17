@@ -9,6 +9,7 @@ import Loading from '../components/Loading'
 import ScrollReveal from 'scrollreveal'
 import TopBtn from '../components/TopBtn'
 import Notification from '../components/Notification'
+import Blog from '../components/Blog'
 
 
 
@@ -66,6 +67,7 @@ const Home = () => {
         <Header/>
         <About/>
         <Team/>
+        <Blog/>
         <Contact/>
         <Footer/>
         <FooterBar/>
