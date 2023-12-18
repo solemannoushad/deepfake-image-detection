@@ -5,5 +5,7 @@ export const connectToMongo = ()=>{
     mongoose.set("strictQuery", false);
     mongoose.connect(mongoURI).then((success)=>{
         console.log("Connected to mongo")
+    }).catch((err)=>{
+        console.log(err)
     })
 }

@@ -43,15 +43,20 @@ router.post('/addBlog', async (req, res)=>{
     }
 })
 
-// router.get('/getnotes' , fetchUser ,async (req , res)=>{
-//     try{
-//         const notes = await Notes.find({user: req.user.id});
-//         res.send(notes);
-//     }catch(error){
-//         console.log(error.message);
-//         res.status(500).send("Internal Error Occured");
-//     }
-// })
+router.delete('/deleteblog/:id', async(req , res)=>{
+
+    try {
+        let blog = await Blog.findById(req.params.id);
+        if(!blog){
+            return res.status(404).send("404 Not Found");
+        }
+        blog = await Blog.findByIdAndDelete(req.params.id);
+        res.json({Success: "Note has been deleted Sussessfully" , blog: blog});
+    } catch (error) {
+        res.status(404).json({error: error.message});
+    }
+
+})
 
 
 export default router;
